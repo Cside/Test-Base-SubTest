@@ -37,8 +37,10 @@ sub run(&) {
     });
 }
 
-sub run_is($$) {
+sub run_is {
     my ($a, $b) = @_;
+    $a ||= 'input';
+    $b ||= 'expected';
     my $content = _get_data_section();
     my $node = Text::TestBase::SubTest->new->parse($content);
 
@@ -54,6 +56,8 @@ sub run_is($$) {
 
 sub run_is_deeply($$) {
     my ($a, $b) = @_;
+    $a ||= 'input';
+    $b ||= 'expected';
     my $package = scalar(caller(0));
 
     my $content = _get_data_section();
@@ -118,12 +122,12 @@ sub _exec_each_test {
             }
         }
     };
-    if ($subtest->depth == 0) {
+    if ($subtest->is_root) {
         $executer->();
     } else {
         return if $SKIP;
         __PACKAGE__->builder->subtest(
-            ($subtest->name || 'XXX lineno here') => $executer
+            ($subtest->name || 'L: ' . $subtest->get_lineno) => $executer
         );
     }
 }
