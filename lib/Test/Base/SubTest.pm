@@ -5,7 +5,7 @@ use utf8;
 use parent qw(Exporter);
 our @EXPORT = (@Test::More::EXPORT, qw/filters blocks register_filter run run_is run_is_deeply/);
 
-our $VERSION = '0.3';
+our $VERSION = '0.4';
 
 use parent qw/
     Test::Base::Less
@@ -183,6 +183,12 @@ Test::Base::Less - Enables Test::Base using subtest
 
 =end html
 
+=head1 DESCRIPTION
+
+Test::Base::SubTest is a extension of L<Test::Base::Less>.
+
+"### TEST NAME" is a delimiter of a subtest. Indentaion is necessary.
+
 =head1 FUNCTIONS
 
 This module exports all Test::More's exportable functions, and following functions:
@@ -262,7 +268,7 @@ You can use a CodeRef as filter.
 
 =head1 SEE ALSO
 
-Most of code is taken from L<Test::Base::Less>.
+Most of code is taken from L<Test::Base::Less>. Thank you very match, tokuhirom.
 
 =head1 AUTHOR
 
