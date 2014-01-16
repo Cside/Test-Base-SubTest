@@ -99,7 +99,7 @@ sub _exec_each_test {
                     $node->set_section($section_name => @data);
                 }
                 if ($node->has_section('ONLY')) {
-                    Carp::croak "Sorry, section 'ONLY' is not implemented...";
+                    Carp::croak "Sorry, section 'ONLY' is not implemented... Patches welcome.";
                     __PACKAGE__->builder->diag("I found ONLY: maybe you're debugging?");
                     $SKIP = 1;
                     $code->($node);
