@@ -2,7 +2,6 @@ package Text::TestBase::SubTest;
 use strict;
 use warnings;
 use 5.008001;
-our $VERSION = '0.1';
 use parent qw(Text::TestBase);
 use Text::TestBase::SubTest::Node::Block;
 use Text::TestBase::SubTest::Node::SubTest;
