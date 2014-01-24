@@ -1,5 +1,5 @@
 {
-   "abstract" : "Enables Test::Base using subtest",
+   "abstract" : "Enables Test::Base to use subtest",
    "author" : [
       "Hiroki Honda <cside.story@gmail.com>"
    ],
@@ -82,5 +82,5 @@
          "web" : "https://github.com/Cside/Test-Base-SubTest"
       }
    },
-   "version" : "0.4"
+   "version" : "0.5"
 }
